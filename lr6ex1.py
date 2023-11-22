@@ -1,10 +1,10 @@
 
-def spaces(string): #Функция удаления пробелов перед строкой
+def spaces(string): 
     i = 0
-    while string[i] in (" "): # изменяем i-й элемент до того момента пока не встретим символ
+    while string[i] in (" "): 
             i +=1
     no_spaces = ''
-    for j in range(i,len(string)): #создаём новую строку без пробелов
+    for j in range(i,len(string)): 
         no_spaces += string[j]
     print(no_spaces)
     return no_spaces
@@ -12,7 +12,7 @@ def spaces(string): #Функция удаления пробелов перед
 while True:
     try:    
         text = input('Введите текст -> ')
-        if len(spaces(text)) == 0:#если у нас строка без пробелов равна нулю то следовательно пустая
+        if len(spaces(text)) == 0:
             raise SyntaxError
         break
     except:

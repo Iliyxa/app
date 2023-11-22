@@ -13,12 +13,12 @@ def _split(string, deliter):
         mas += [word]
     return mas
 
-def spaces(string): #Функция удаления пробелов перед строкой
+def spaces(string): 
     i = 0
-    while string[i] in ("р "): # изменяем i-й элемент до того момента пока не встретим символ
-            i +=1
+    while string[i] in (" "): 
+         i +=1
     no_spaces = ''
-    for j in range(i,len(string)): #создаём новую строку без пробелов
+    for j in range(i,len(string)):
         no_spaces += string[j]
 
     return no_spaces
@@ -27,9 +27,9 @@ while True:
     try:    
         text = input('Введите текст -> ')
         if len(spaces(text)) == 0:
-            raise SyntaxError
+            raise ValueError
         break
-    except:
+    except ValueError:
         print('Введенна пустая строка')
 print(_split(text, " "))
 print (f'Количество слов в данном тексте {len(_split(text, " "))}')

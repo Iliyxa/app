@@ -23,8 +23,8 @@ summa = 0
 first_index = -1
 last_index = -1
 
-for i in range(0,len(mas),2):#проходимся по чётным индексам так как номера начинаются с 1
-    summa_odd += mas[i]#суммируем все элементы с нечетными номерами
+for i in range(0,len(mas),2):
+    summa_odd += mas[i]
 print(f'Сумма элементов списка с нечетными номерами {summa_odd}')
 
 for i in range(len(mas)):
